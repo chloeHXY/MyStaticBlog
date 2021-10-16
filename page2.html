@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十日谈</title>
+    <link rel="stylesheet" href="css/page_base.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2732169_qar8yu8wse9.css">
+    <link rel="stylesheet" href="css/now_time.css">
+    <script>
+        window.onload=function() {
+            //获取日期
+            var date = new Date();
+            var year = date.getFullYear();
+            var dates = date.getDate();
+            var month = date.getMonth() + 1; //注意月份是0-11对应1-12月,所以要加一
+            var day = date.getDay();
+            // console.log(year, month, dates, day); //2021 7 27 5
+            var arr = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']; //(分别对应0-6)
+            console.log('今天是' + year + '年' + month + '月' + dates + '日 ' + arr[day]); //今天是2021年8月27日 星期五
+            //格式化时分秒(注意实现：个位数自动补零)
+            function time(date) { //19:56:03
+                var hour = date.getHours();
+                hour = hour < 10 ? '0' + hour : hour;
+                var minute = date.getMinutes();
+                minute = minute < 10 ? '0' + minute : minute;
+                var second = date.getSeconds();
+                second = second < 10 ? '0' + second : second;
+                return hour + ':' + minute ;
+            }
+
+            // console.log(time(date));
+            var nowtime = document.querySelector('.r_content');
+            nowtime.innerHTML += ' 现在是 ' + year + '年' + month + '月' + dates + '日 ' + arr[day] +' '+ time(date) + ' ' + '&#xe628;'
+            var back=document.querySelector('.l_content');
+            back.addEventListener('click',function (){
+                location.href='fontpage.html';
+            })
+        };
+    </script>
+</head>
+<body>
+<div class="now_time">
+    <div class="l_content"><i>&#xe788;</i>&nbsp;来自远方的朋友，你好!</div>
+    <div class="r_content"><i>&#xe606;</i></div>
+</div>
+<div class="content">
+<h2 >十日谈</h2><br><br><h4>昭摇/迹</h4><br>
+<p>前几日丧了一段时间，只觉得生命的转轮又仿佛被撬动了一点
+    自我是一种人设。
+    <br><br>我们不同的时段用不同的人设去生活，人设由心生，如果我们感觉生活很容易，或许是因为你的心境与环境达到了统一。如若感觉乏力，或许是二者不兼容。</p>
+    <br><p>《山月记》中 中岛敦说人心有一头猛虎，现在看来那头猛虎便是浅薄的自己，人生不过是一个与浅薄的自己作斗争的过程。
+    常年，父辈总嘲谑小辈，”你有什么忧烦的，高考大关已过，已无升学压力“ 每每闻之，心中确有抚慰，但也仅仅是抚慰罢了。</p>
+    <br><p>最近总是觉得乏力，大概是心比天高，前日，偶在知乎上看到关于捧杀的文章，不禁忧虑。
+    其一是身边无人，以前总是不自觉的将生活中所观察到的道理，言传于友人，作为茶余饭后的谈资。现在没有可以言说的人，对是非少了很多的辩证
+    其二，是对于捧杀，如同暗藏的危机的忧惧。
+    多许日前，曾于母亲讨论 是什么能够让一群人快速凝聚在一起，是一种盲目的追捧所产生的巨大归属感与认同感，仿佛自我的价值得到了认同，但这种互相吹捧而产生的归属感，无异于慢性毒药，令人上瘾。毁掉一个人的最好方法就是让他失去自我认知，还沾沾自喜。
+    但就像《乌合之众》中说，群体聚集在一起往往会产生一股巨大的力量，使人在一瞬间积聚自信，成为一股强风，助你远航。
+    王安忆曾在复旦大学致辞时说：”你当与主流媒体保持一定距离，在相对孤立中完善自己。
+    这大概是在这狰狞的社会中跋涉的不二法门。</p>
+    <br><p>经常看到这样的人，至少可能是这样的人，我们不会因为发现与自己相似的人而热络的交流，而会选择仅仅互望一眼，然后继续前行，约莫是这种相望于江湖之感，让他们覆上一层面纱，和淡淡的侠客之气。</p>
+    <br><p>近日，看完了美剧《后翼弃兵》,伊丽莎白恣意洒脱的女王气质，是当代女性心中所期许但难以企及的。想起许久前在知乎上读到缪斯谭对精致女生的描述：贵气，英气，静气。贵气或许一部分却是来源于配饰与装点，但更多应是源于骨子里的自信甚至是自傲。善良与爱乃是珍贵之物，仅仅留给值得的人。而不去讨好任何一个人，讨好是一种习惯，有了第一次，你将会越来越熟练。
+    若用一句话加一概括，便是：不辜负每一份热情，不讨好每一份冷漠，不随随便便开启一段未加审视的感情，不论是友情或是爱情，因为任何一段感情的维系都需要精力，充实你自己的永远是丰富的内心，而不是依靠别人赶走孤独。伊丽莎白的自傲或许是来源于一种自我防御，童年爱的缺失让她格外渴求爱，但她的内心深处却是一段严寒，她仅仅从表面上去接受一段爱的欢愉，她在陶恩斯，哈利，兹，之间辗转，这并不是浪荡，而是恣意。她从未附着于任意一人，她只是在及时行乐。这令我想起了安娜，《岛》中”她开门欢喜地接过杰恩的信，是卢克带过来的，但她甚至没瞧他一眼，那昨晚湿润而灼热的吻算什么，这大概是她的及时行乐罢了，卢克想。”
+    伊丽莎白的英气，体现在她行棋的果敢与坚毅上，外貌与气质只是一张车票，而决定你是否中途下车的是沿途的风景。不得不说感情是旗鼓相当，争锋相对，陶恩斯虽然行棋不如贝斯，但从一开始就从气势上压制了贝斯，这源于陶恩斯的自信，这很大一部分来源于，女主充满爱的凝望。所以其实爱情就是互相勾引的过程。</p>
+    <br><p>最后静气，这是一种内秀的气质，是一种安然与大气。
+    <br><br>突然无言了，留白吧。</p>
+</div>
+</body>
+</html>

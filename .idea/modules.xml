@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../2021前端---javascript/.idea/2021前端---javascript.iml" filepath="$PROJECT_DIR$/../2021前端---javascript/.idea/2021前端---javascript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../shopping品优购项目/.idea/shopping品优购项目.iml" filepath="$PROJECT_DIR$/../shopping品优购项目/.idea/shopping品优购项目.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/微光招新：个人博客静态页面.iml" filepath="$PROJECT_DIR$/.idea/微光招新：个人博客静态页面.iml" />
+    </modules>
+  </component>
+</project>

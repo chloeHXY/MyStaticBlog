@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>梧桐影</title>
+  <link rel="stylesheet" href="css/page_base.css">
+    <link rel="stylesheet" href="css/now_time.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2732169_qar8yu8wse9.css">
+    <script>
+        window.onload=function() {
+            //获取日期
+            var date = new Date();
+            var year = date.getFullYear();
+            var dates = date.getDate();
+            var month = date.getMonth() + 1; //注意月份是0-11对应1-12月,所以要加一
+            var day = date.getDay();
+            // console.log(year, month, dates, day); //2021 7 27 5
+            var arr = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']; //(分别对应0-6)
+            console.log('今天是' + year + '年' + month + '月' + dates + '日 ' + arr[day]); //今天是2021年8月27日 星期五
+            //格式化时分秒(注意实现：个位数自动补零)
+            function time(date) { //19:56:03
+                var hour = date.getHours();
+                hour = hour < 10 ? '0' + hour : hour;
+                var minute = date.getMinutes();
+                minute = minute < 10 ? '0' + minute : minute;
+                var second = date.getSeconds();
+                second = second < 10 ? '0' + second : second;
+                return hour + ':' + minute ;
+            }
+
+            // console.log(time(date));
+            var nowtime = document.querySelector('.r_content');
+            nowtime.innerHTML += ' 现在是 ' + year + '年' + month + '月' + dates + '日 ' + arr[day] +' '+ time(date) + ' ' + '&#xe628;'
+            var back=document.querySelector('.l_content');
+            back.addEventListener('click',function (){
+                location.href='fontpage.html';
+            })
+        };
+    </script>
+
+</head>
+<body>
+<div class="now_time">
+    <div class="l_content"><i>&#xe788;</i>&nbsp;来自远方的朋友，你好!</div>
+    <div class="r_content"><i>&#xe606;</i></div>
+</div>
+<div class="content">
+    <h2>梧桐影</h2>
+    <p>&nbsp;</p><p>&nbsp;</p><h4>昭摇/迹</h4>
+    <p>&nbsp;</p>
+    <p>辛丑年七月廿六日夜，听梧桐影，音符骤起，视线模糊，眼前光影交错，恍惚千年。遂迹此篇。</p>
+    <p>&nbsp;</p><p>有人说，在人生命将逝的瞬间，会进到平行时空，在那里，那一瞬很长，长到足以回忆完一生，从黄发到垂髫。那一瞬又很短，短到来不及嗟叹余生遗憾，来不及挣扎，来不及懊悔，像一滴水，落入深海，至此，水上的风云变化，月升日落，风萧鸥鸣，尽与你无关。你的声音淹没在深海，无人知晓。</p>
+    <p>&nbsp;</p><p>其实这样的瞬间很多，藏在日子的某一刻。快乐的轻易忘记，悲伤的不愿想起。能在平淡的日子里突然宕起，大多是遗憾。像细细的雨，渗进岁月的表皮，无声无息。</p>
+    <p>&nbsp;</p><p>或许，许多遗憾是无论在何时，怎样努力，都无法改变的不争现实。</p>
+    <p>&nbsp;</p><p>约莫每个遗憾，在经年前，都是难以触及的悲伤；而悲伤经岁月风化，变成了遗憾，云淡风轻。难以触及的悲伤终变成口中不痛不痒的谈资。世间最绝情不过时间，步履匆匆，不带走分毫。</p>
+    <p>&nbsp;</p><p>许多事，就像这篇文章，骤然起篇，却不知，如何收尾。</p>
+</div>
+</body>
+</html>

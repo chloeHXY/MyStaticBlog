@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>出走</title>
+    <link rel="stylesheet" href="css/page_base.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2732169_qar8yu8wse9.css">
+    <link rel="stylesheet" href="css/now_time.css">
+    <script>
+        window.onload=function() {
+            //获取日期
+            var date = new Date();
+            var year = date.getFullYear();
+            var dates = date.getDate();
+            var month = date.getMonth() + 1; //注意月份是0-11对应1-12月,所以要加一
+            var day = date.getDay();
+            // console.log(year, month, dates, day); //2021 7 27 5
+            var arr = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']; //(分别对应0-6)
+            console.log('今天是' + year + '年' + month + '月' + dates + '日 ' + arr[day]); //今天是2021年8月27日 星期五
+            //格式化时分秒(注意实现：个位数自动补零)
+            function time(date) { //19:56:03
+                var hour = date.getHours();
+                hour = hour < 10 ? '0' + hour : hour;
+                var minute = date.getMinutes();
+                minute = minute < 10 ? '0' + minute : minute;
+                var second = date.getSeconds();
+                second = second < 10 ? '0' + second : second;
+                return hour + ':' + minute ;
+            }
+            // console.log(time(date));
+            var nowtime = document.querySelector('.r_content');
+            nowtime.innerHTML += ' 现在是 ' + year + '年' + month + '月' + dates + '日 ' + arr[day] +' '+ time(date) + ' ' + '&#xe628;'
+            var back=document.querySelector('.l_content');
+            back.addEventListener('click',function (){
+                location.href='fontpage.html';
+            })
+        };
+    </script>
+</head>
+<body>
+<div class="now_time">
+    <div class="l_content"><i>&#xe788;</i>&nbsp;来自远方的朋友，你好!</div>
+    <div class="r_content"><i>&#xe606;</i></div>
+</div>
+<div class="content">
+    <h2>出走</h2>
+    <p>&nbsp;</p><p>&nbsp;</p><h4>昭摇/迹</h4><p>&nbsp;</p>
+    <p>我无数次渴望走出去。</p>
+    <p>&nbsp;</p><p>我期待走出象牙塔，走出日复一日的、累了就趴，醒了就写的荒芜岁月，我理解的人生是青葱的，茂盛而鲜活有力。</p>
+    <p>&nbsp;</p> <p>我期待走出小城，我害怕有一天我膛中的火焰，连同眼里的光，一起消失，无影无踪。朝九晚五，柴米油盐，曾经盛大而灿烂的构想，化作酒过三巡后的谈资。提笔只谈余生。</p>
+    <p>&nbsp;</p><p>我期待走向世界，去听，去看，去遇见，去发现。地球的另一侧不再只存在于，书、网络、他人眉飞色舞的讲述中。而在我的眼前，触手可及，平和而喜悦地。</p>
+    <p>&nbsp;</p><p>我期待走出昨天的自己，剥除心灵的桎梏，一次次推翻浅薄贫瘠的灵魂，让自己变得丰富而立体。而不是庸庸碌碌的一成不变。我期待遇见，一个契合的灵魂，一次相遇，适逢其会，猝不及防。</p>
+    <p>&nbsp;</p><p>对于平凡，我承认，但不甘愿。</p>
+    <p>&nbsp;</p><p>我无时无刻不在准备着，铺排着，为未来。</p>
+    <p>&nbsp;</p><p>我一直在出走，像达摩流浪者。永远年轻，永远热泪盈眶。</p>
+    <p>&nbsp;</p>
+
+</div>
+</body>
+</html>

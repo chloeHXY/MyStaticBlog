@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尖锐</title>
+    <link rel="stylesheet" href="css/page_base.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2732169_qar8yu8wse9.css">
+    <link rel="stylesheet" href="css/now_time.css">
+    <script>
+        window.onload=function() {
+            //获取日期
+            var date = new Date();
+            var year = date.getFullYear();
+            var dates = date.getDate();
+            var month = date.getMonth() + 1; //注意月份是0-11对应1-12月,所以要加一
+            var day = date.getDay();
+            // console.log(year, month, dates, day); //2021 7 27 5
+            var arr = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']; //(分别对应0-6)
+            console.log('今天是' + year + '年' + month + '月' + dates + '日 ' + arr[day]); //今天是2021年8月27日 星期五
+            //格式化时分秒(注意实现：个位数自动补零)
+            function time(date) { //19:56:03
+                var hour = date.getHours();
+                hour = hour < 10 ? '0' + hour : hour;
+                var minute = date.getMinutes();
+                minute = minute < 10 ? '0' + minute : minute;
+                var second = date.getSeconds();
+                second = second < 10 ? '0' + second : second;
+                return hour + ':' + minute ;
+            }
+
+            // console.log(time(date));
+            var nowtime = document.querySelector('.r_content');
+            nowtime.innerHTML += ' 现在是 ' + year + '年' + month + '月' + dates + '日 ' + arr[day] +' '+ time(date) + ' ' + '&#xe628;'
+            var back=document.querySelector('.l_content');
+            back.addEventListener('click',function (){
+                location.href='fontpage.html';
+            })
+        };
+    </script>
+</head>
+<body>
+<div class="now_time">
+    <div class="l_content"><i>&#xe788;</i>&nbsp;来自远方的朋友，你好!</div>
+    <div class="r_content"><i>&#xe606;</i></div>
+</div>
+<div class="content">
+    <h2>尖锐</h2>
+    <p>&nbsp;</p><p>&nbsp;</p><h4>昭摇/迹</h4><p>&nbsp;</p>
+    <p>尖锐的阳光，摇曳着闪闪散开，晚霞是夏夜的前奏，天真是少年的旌旗。14天将近，并没有想象中的难舍，或许是炎热的天气，宿舍的蟑螂，声音淹没在嬉笑中，无力感，一次次涌上心头，让心在惊诧与失望中抖掉了几分温情。</p>
+    <p>&nbsp;</p>
+    <p>若说这片土地有什么特别之处，那大概是一种催人奋进的焦虑感，在来到这里之前，我没有想到，还有许许多多的人，住在灰暗的房间里，这里有蟑螂蚊虫，热水需要用水壶烧，空调漏着水，和大多数人一样，干着平凡的工作，过着平凡的日子，日复一日。人们迎着同一片朝阳，等着同一片星光，过着截然不同的人生。我庆幸，但也不甘，或许我的生活对某些人来说，也正是如此，人生，为了跨越阶级。</p>
+    <p>&nbsp;</p>
+    <p>我不知道这一生还有哪些足以令人奋进的理由。尽管深知，每个人都在自己的时区活着，但我仍会为那些尚未觉醒的灵魂焦急，害怕他们成为庸碌的灵魂，泯然众人，每当思虑到此，我总会怀疑，我是否错了，因为有许多在我看来庸碌的灵魂，却仍能在人群中挺拔，而某些清醒的却在半山腰盘旋。</p>
+    <p>&nbsp;</p><p>直到那一次的思辨课，我从一个小朋友的回答中找到了答案。</p>
+    <p>&nbsp;</p>
+    <p>在唯一的一次思辨课上，我给初一每人发了一张材料。</p>
+    <p>正面是一首现代诗，名为《难遂》，是我于两年前写下的。背面是5个问题，其中有一个问题是：你觉得你现在的生活怎么样？收到的答案中，有许许多多份写道，我非常满意现在的生活，父母安好，衣食不愁。这或许是无数中年人的梦想，但我为他们犹是少年，而感到悲怆，真正的知足常乐是，领略世界风华后，仍能享偏安一隅之乐，而不是在天地的一角，站在父母的肩上，坐井观天沾沾自喜，心满意足。不是每个人都需要野心勃勃，但我希望每个人都能拥有选择权，在领略灿烂盛大之后。</p>
+    <p>令人惊喜的是，其中一位孩子的答案，他没有宏大的高瞻远瞩，轻松的文字间是对现实的完全把握，他就像一阵风，轻盈地驰骋于世间。我十分感谢那个孩子，他让人明白真正的清醒是对于当下而非未来，努力尽今夕，是最简单高效的处世哲学。</p>
+    <p>&nbsp;</p>
+    <p>在这14天的支教活动，我感到了由内而外的轻松，许是常常在高楼林立中追名逐利，精打细算每一天，处理繁复的人情世故。当偶有一天，我来到了乡间，我的任务只是教好孩子们，我的心似乎变得开阔明朗起来。一直以来，时常觉得自己或有社恐症。但这14天与队友的相处却是格外自如，究其原因，至今未能弄明白，或许是我把自己束缚成一个茧，这些束缚来源于我的心。</p>
+    <p>&nbsp;</p><p>在人情世故面前，我时常小心翼翼，有时不满于自己瞻前顾后的模样，便故作洒脱，不去想后果，实则仍是举步维艰的姿态。或许我与人情练达，世事洞明之间只间隔了一个心态。而这次的实践活动不仅仅是一次社会实践，更是一次心的实践，是一个心的探索，与队员，与家长，与小朋友。究其根本，是一场人际交往的探索。在碌碌的生活中，我们很难完全沉浸于一段关系，就像《沉思录》中说的那样 ”为了寻找宁静，只做必要的事情，以及本性合群的动物的理性所要求做的一切事情，并像所要求的那样做。“ 而在这里，却能自由的感受，表达，不用考虑太多。</p>
+    <p>&nbsp;</p><p>我十分羡慕那些小朋友，以一个天真的姿态生活，毫不掩饰的表达自己的想法，毫不保留的释放自己的热情，我十分乐意和她们玩耍，因为在这里，每一次心的交流，都会有回应，从眼神中，从行动上。直白而又滚烫。在离开那天，那个四年级的小男孩，跑到我面前，从兜里拿出一个棒棒糖。这样可可爱爱的行为，成为了这14天活动的高潮，亦是结尾。</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
+
+</body>
+</html>

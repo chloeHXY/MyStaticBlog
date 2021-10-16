@@ -1,0 +1,42 @@
+.now_time{
+    position: fixed;
+    width: 100%;
+    z-index: 2000;
+    top: 0;
+    height: 50px;
+    /*background-image: linear-gradient(#3a737b -119%, #f7f7f7);*/
+    background-color: #f2f8fb;
+    opacity: .7;
+    padding-top: 20px;
+    padding-left: 100px;
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
+    /*margin-right: auto;*/
+    /*width: 1549px;*/
+
+    font-family: "ËÎÌו",'iconfont',serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.now_time .r_content{
+    position: absolute;
+    right: 254px;
+}
+.now_time .l_content{
+    position: absolute;
+    top: -21px;
+    left: 198px;
+}
+.now_time .l_content i{
+    font-size: 105px;
+    color: #154644;
+    font-weight: normal;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.now_time .r_content i{
+    font-size: 42px;
+    color: #ad9c90;
+    font-weight: normal;
+    vertical-align: middle;
+}

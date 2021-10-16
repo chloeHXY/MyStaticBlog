@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>昭摇的个人博客_首页</title>
+    <link rel="stylesheet" href="css/now_time.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2732169_qar8yu8wse9.css">
+    <link rel="stylesheet" href="css/fontpage.css">
+<!--    <script src="common.js" type="text/javascript" language="JavaScript" charset=“utf-8”></script>-->
+<!--    <link rel="stylesheet" href="//at.alicdn.com/t/font_2732169_qar8yu8wse9.js">-->
+    <script>
+        window.onload=function() {
+            //获取日期
+            var date = new Date();
+            var year = date.getFullYear();
+            var dates = date.getDate();
+            var month = date.getMonth() + 1; //注意月份是0-11对应1-12月,所以要加一
+            var day = date.getDay();
+            // console.log(year, month, dates, day); //2021 7 27 5
+            var arr = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']; //(分别对应0-6)
+            console.log('今天是' + year + '年' + month + '月' + dates + '日 ' + arr[day]); //今天是2021年8月27日 星期五
+            //格式化时分秒(注意实现：个位数自动补零)
+            function time(date) { //19:56:03
+                var hour = date.getHours();
+                hour = hour < 10 ? '0' + hour : hour;
+                var minute = date.getMinutes();
+                minute = minute < 10 ? '0' + minute : minute;
+                var second = date.getSeconds();
+                second = second < 10 ? '0' + second : second;
+                return hour + ':' + minute ;
+            }
+
+            // console.log(time(date));
+            var nowtime = document.querySelector('.r_content');
+            nowtime.innerHTML += ' 现在是 ' + year + '年' + month + '月' + dates + '日 ' + arr[day] +' '+ time(date) + ' ' + '&#xe628;'
+            var back=document.querySelector('.l_content');
+            back.addEventListener('click',function (){
+                location.href='fontpage.html';
+            })
+        };
+    </script>
+</head>
+<body>
+<div class="now_time">
+    <div class="l_content"><i>&#xe788;</i>&nbsp;来自远方的朋友，你好!</div>
+    <div class="r_content"><i>&#xe606;</i></div>
+</div>
+<div class="all">
+    <div class="greeting">
+        <div class="poem">
+            <img src="image/pic_morning.png" alt="">
+            <p class="a_poem">I strove with none,<br>
+                For none was worth my strife.<br>
+                Nature I loved and,<br>
+                Next to Nature, Art;<br>
+                I warm'd both hands before the fire of life;<br>
+                It sinks,<br>
+                And I am ready to depart.<br><br>
+
+                我和谁都不争，<br>
+                和谁争我都不屑；<br>
+                我爱大自然，<br>
+                其次就是艺术；<br>
+                我双手烤着生命之火取暖；<br>
+                火萎了，<br>
+                我也准备走了。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---兰德《生与死》</p>
+        </div>
+        <div class="self_introduce">
+            <div class="pic"></div>
+            <div class="intro">
+                <h1>关于博主：</h1>
+                <dl>
+                    <dd>姓名：黄心悦</dd>
+                    <dd>笔名：昭摇</dd>
+                    <dd>未来职业：希望有更多可能性的前端码农</dd>
+                    <dd>about hobby:阅读、写作、学习有趣的东西、旅行</dd>
+                </dl>
+
+            </div>
+            <div class="toyou">
+                <h3>献给在此相遇的我们 :</h3>
+                <br>我们从现实中逃离，穿过人潮，来到这里。这片精神高地。
+                敬不计回报的热爱，敬无路可退的理想，<br><br>敬自由的灵魂，敬不随波逐流的自我，敬情感信仰和骚动，敬年少不羁与狂傲，<br><br>
+                敬幽微岁月，敬心中热血，<br><br>敬终将到来的光明与未来。<br><br>
+                oh dear friends,Raise your glasses, let's cheers！<br>
+            </div>
+        </div>
+        <div class="article ">
+            <h2>博主随感：</h2>
+            <ul>
+                <li><div class="cir">1</div>&#xe701;<h4>梧桐影</h4><br><i>能在平淡的日子里突然宕起，大多是遗憾。像细细的雨，渗进岁月的表皮，无声无息。</i></li>
+                <li><div class="cir">2</div>&#xe62d;<h4>十日谈</h4><br><i>《山月记》中 中岛敦说人心有一头猛虎，现在看来那头猛虎便是浅薄的自己，人生不过是一个与浅薄的自己作斗争的过程。</i></li>
+                <li><div class="cir">3</div>&#xe91b;<h4>出走</h4><br><i>我一直在出走，像达摩流浪者。永远年轻，永远热泪盈眶。</i></li>
+                <li><div class="cir">4</div>&#xe75a;<h4>尖锐</h4><br><i>真正的清醒是对于当下而非未来，努力尽今夕，是最简单高效的处世哲学</i></li>
+            </ul>
+        </div>
+        <div class="footer">The universe is so vast.<br>Why we meet here.
+           </div>
+<script>
+    var article = document.querySelector('.article');
+    var lis = article.querySelectorAll('li');
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].setAttribute('rank', i);
+        lis[i].addEventListener('click', function (e) {
+            var ranks = this.getAttribute('rank');
+            switch (ranks) {
+                case '0':
+                    location.href = 'page1.html';
+                    break;
+                case '1':
+                    location.href = 'page2.html';
+                    break;
+                case '2':
+                    location.href = 'page3.html';
+                    break;
+                case '3':
+                    location.href = 'page4.html';
+            }
+        })}
+</script>
+    </div>
+</div>
+
+</body>
+</html>
